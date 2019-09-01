@@ -1,5 +1,8 @@
 <body>
   <header>
+    <!--modalテストr-->
+
+    <!--modalテストr-->
     <div class = left-box>
       <div class = icons>
         <% if user_signed_in? %>
@@ -11,12 +14,10 @@
               <i class="fas fa-signature"></i>
             <%end%>
             <br>
-            <br>
             <%= link_to new_user_session_path do%>
               <i class="fas fa-sign-in-alt"></i>
             <% end %>
           <% end %>
-            <br>
             <br>
             <%= link_to new_post_path do %>
               <i class="far fa-plus-square"></i>
@@ -27,17 +28,7 @@
     <div class = right-box>
       <h1 class = blog >blog</h1>
       <p>This is my first blog. I still have to improve. Do my best.</p>
-    <%# <!--modalテストr-->
-        <div class="content">
-            <a class="js-modal-open" href="">クリックでモーダルを表示</a>
-        </div>
-        <div class="modal js-modal">
-            <div class="modal__bg js-modal-close"></div>
-            <div class="modal__content">
-                <p>ここにモーダルウィンドウで表示したいコンテンツを入れます。</p>
-                <a class="js-modal-close" href="">閉じる</a>
-            </div><!--modal__inner-->
-        </div><!--modal--> %>
+
     </div>
 
     <%= render 'posts'%>
