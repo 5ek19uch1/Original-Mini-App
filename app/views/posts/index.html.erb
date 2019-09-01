@@ -1,8 +1,5 @@
 <body>
   <header>
-    <!--modalテストr-->
-
-    <!--modalテストr-->
     <div class = left-box>
       <div class = icons>
         <% if user_signed_in? %>
@@ -28,12 +25,34 @@
     <div class = right-box>
       <h1 class = blog >blog</h1>
       <p>This is my first blog. I still have to improve. Do my best.</p>
-
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <!--modalテストr-->
+        <div class="popupModal1">
+          <input type="radio" name="modalPop" id="pop11" />
+          <label for="pop11">【about】</label>
+          <input type="radio" name="modalPop" id="pop12" />
+          <label for="pop12">CLOSE</label>
+          <input type="radio" name="modalPop" id="pop13" />
+          <label for="pop13">×</label>
+        <div class="modalPopup2">
+          <div class="modalPopup3">
+            <h4 class="modalTitle">このMINI APPについて</h4>
+              <div class="modalMain">
+                <p>【要件定義１】本業（学習）が差し支えない程度にすること</p>
+                <p>【要件定義２】フロントエンドの練習・復習になること</p>
+                <p>【仕様】HTML、CSS、JS（jQuery）Webフォント使用の練習</p>
+                <p>【成果】色々な機能、コマンドと出会い勉強になりました。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+            <!--modalテストr-->
     </div>
-
     <%= render 'posts'%>
   </header>
-
-
 </body>
 
