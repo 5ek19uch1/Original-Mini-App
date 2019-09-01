@@ -1,0 +1,59 @@
+<body>
+  <header>
+    <div class = left-box>
+      <div class = icons>
+        <% if user_signed_in? %>
+            <%= link_to destroy_user_session_path, method: :delete do%>
+              <i class="fas fa-sign-out-alt"></i>
+            <% end%>
+          <% else %>
+            <%= link_to new_user_registration_path do%>
+              <i class="fas fa-signature"></i>
+            <%end%>
+            <br>
+            <br>
+            <%= link_to new_user_session_path do%>
+              <i class="fas fa-sign-in-alt"></i>
+            <% end %>
+          <% end %>
+            <br>
+            <br>
+            <%= link_to new_post_path do %>
+              <i class="far fa-plus-square"></i>
+            <% end %>
+      </div>
+    </div>
+
+    <div class = right-box>
+      <h1 class = blog >blog</h1>
+      <p>This is my first blog. I still have to improve. Do my best.</p>
+    <%# <!--modalテストr-->
+        <div class="content">
+            <a class="js-modal-open" href="">クリックでモーダルを表示</a>
+        </div>
+        <div class="modal js-modal">
+            <div class="modal__bg js-modal-close"></div>
+            <div class="modal__content">
+                <p>ここにモーダルウィンドウで表示したいコンテンツを入れます。</p>
+                <a class="js-modal-close" href="">閉じる</a>
+            </div><!--modal__inner-->
+        </div><!--modal--> %>
+    </div>
+
+    <div class = posts>
+          <% @posts.each do |post| %>
+              <div class = contents>
+                <h3><%= post.content %></h3>
+              </div>
+              <div class = edit-menu>
+                <P><%= link_to '詳細', post %></P>
+                <P><%= link_to '編集', edit_post_path(post) %></P>
+                <P><%= link_to '削除', post, method: :delete, data: { confirm: '本当に？' } %></P>
+              </div>
+        <% end %>
+    </div>
+  </header>
+
+
+</body>
+

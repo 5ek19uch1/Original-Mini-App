@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>sekiguchi</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="index.scss">
+    <link href="https://fonts.googleapis.com/css?family=Bai+Jamjuree:500|Bevan|Bowlby+One|Bungee+Inline|Libre+Barcode+39|M+PLUS+1p&display=swap" rel="stylesheet">    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <%# <script src="modal.js"> %>
+    <script>
+      $(document).ready(function() {
+        $('.posts').fadeIn(1500);
+      });
+      $(document).ready(function() {
+        $('.left-box').delay(1000).fadeIn(2000);
+      });
+      $(document).ready(function() {
+        $('.right-box').delay(3000).fadeIn(1000);
+      });
+    </script>
+  </head>
+
+  <body>
+    <%= yield %>
+  </body>
+</html>
