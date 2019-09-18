@@ -203,8 +203,8 @@ a {
 
   textarea {
     resize: none;
-    width:300px;
-    height:200px;
+    width:70%;
+    height:400px;
     color: black;
   }
 
@@ -222,6 +222,8 @@ a {
       font-family: 'M PLUS 1p', sans-serif;
       letter-spacing: 3px;
       position: fixed;
+      animation: anime2 3s ease;
+
     }
 
 //-----------------以下実験---------------------//
@@ -365,4 +367,8 @@ max-width: 100%;
 .popupModal1{
   font-size: 2px;
   color: black;
+}
+
+.new_user{
+  animation: anime2 3s ease;
 }
