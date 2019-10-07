@@ -3,12 +3,13 @@
   margin: 0px;
   padding: 0px;
   text-decoration:none ;
-  color: #eee
+  color: #eee;
 }
 
 body{
   text-align: center;
-  background-image: image-url('images/rdtyuhij.jpg') fixed;
+  background-image: url(/assets/rdtyuhij.jpg);
+  background-color: black;
   background-size: cover;
   position: relative;
   height: 100%;
@@ -18,8 +19,8 @@ body{
       position: fixed;
       width:25%;
       height: 100%;
-      background-color: rgba(58, 58, 61, 0.747);
-      padding-top: 20%;
+      background-color: rgba(58, 58, 61, 0.8);
+      padding-top: 21%;
       font-family: 'M PLUS 1p', sans-serif;
       animation: anime1 2s ease;
 
@@ -94,6 +95,7 @@ body{
         width: 200px;
         font-size: 2px;
         letter-spacing: 2px;
+        line-height: 18px;
         font-family: 'Bai Jamjuree', sans-serif;
       }
     }
@@ -126,14 +128,18 @@ body{
         font-family: 'M PLUS 1p', sans-serif;
         display: none;
         .contents{
-          width: 400px;
+          width: 600px;
           margin: auto;
+          border-bottom: bold;
           h3{
             margin-top: 0px;
             margin-bottom: 0px;
             padding: 15px 15px 0 15px;
             font-size: 14px;
-            line-height: 1.5
+            line-height: 2;
+            letter-spacing: 6px;
+            border-bottom: thin solid #a3a3a3;
+
           }
     }
     .edit-menu{
