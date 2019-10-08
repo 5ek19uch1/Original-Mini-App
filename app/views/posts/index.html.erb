@@ -2,46 +2,11 @@
   <div class = icons>
 
 <%# ****************************************************** %>
-    <% if user_signed_in? %>
-        <%= link_to destroy_user_session_path, method: :delete do%>
-          <i class="fas fa-sign-out-alt"></i>
-          <h4 class = icon-title>Log Out</h4>
-        <% end%>
-        <br>
-        <%= link_to new_post_path do %>
-          <i class="far fa-edit"></i>
-        <% end %>
 
-    <% else %>
-
-          <%= link_to new_user_registration_path do%>
-            <i class="fas fa-signature"></i>
-            <h4 class = icon-title>Sing In</h4>
-
-          <%end%>
-
-          <br>
-          <%= link_to new_user_session_path do%>
-            <i class="fas fa-sign-in-alt"></i>
-            <h4 class = icon-title>Log In</h4>
-          <% end %>
-
-    <% end %>
-  </div>
-</div>
-<%# ***************************************************** %>
-<div class = right-box>
-  <h1 class = blog >blog</h1>
-  <p>This is my first blog. I still have to improve. Do my best.</p>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <!--modalテストr-->
+      <div class = "icons-and-text" >
     <div class="popupModal1">
       <input type="radio" name="modalPop" id="pop11" />
-      <label for="pop11">【about】</label>
+      <label for="pop11">■　about</label>
       <input type="radio" name="modalPop" id="pop12" />
       <label for="pop12">CLOSE</label>
       <input type="radio" name="modalPop" id="pop13" />
@@ -63,12 +28,65 @@
                 scaffoldで作られた真っ白な画面を、どこまで装飾できるか？というテーマで
                 <br>
                 マークアップの練習としてデザインしました。
+                <br>
+                Sign Up/Log Inしていただくと、投稿ボタンが出現します。
                 </p>
           </div>
         </div>
       </div>
     </div>
-        <!--modalテストr-->
+      </div>
+
+    <% if user_signed_in? %>
+
+        <%# ハリボテSIGN-IN %>
+      <div class = "icons-and-texta" >
+          <div class = "icon-title"style = "color: grey;">■　Sign Up</div>
+      </div>
+        <%# ハリボテSING-Out %>
+      <div class = "icons-and-texta">
+          <div class = "icon-title"style = "color: grey;">■　Log In </div>
+      </div>
+
+        <%= link_to destroy_user_session_path, method: :delete do%>
+      <div class = "icons-and-text">
+          <div class = icon-title>■　Log Out</div>
+      </div>
+        <% end %>
+
+        <%= link_to new_post_path do %>
+      <div class = "drop-icon">
+          <i class="far fa-edit"></i>
+      </div>
+        <% end %>
+<%# elseelseelseelseelseelseelse %>
+    <% else %>
+<%# elseelseelseelseelseelseelse %>
+    <%= link_to new_user_registration_path do%>
+      <div class = "icons-and-text" >
+          <div class = "icon-title">■　Sign Up</div>
+      </div>
+    <%end%>
+  
+    <%= link_to new_user_session_path do%>
+      <div class = "icons-and-text">
+          <div class = "icon-title">■　Log In </div>
+      </div>
+    <% end %>
+
+
+      <div class = "icons-and-texta">
+          <div class = "icon-title" style = "color: grey;">■　Log Out</div>
+      </div>
+
+    <% end %>
+  </div>
+</div>
+<%# ***************************************************** %>
+<div class = right-box>
+  <h1 class = blog >blog</h1>
+  <p>This is my first blog. I still have to improve. Do my best.</p>
+
 </div>
 <%= render 'posts'%>
 
