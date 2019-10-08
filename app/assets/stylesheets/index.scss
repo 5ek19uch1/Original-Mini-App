@@ -9,10 +9,10 @@
 body{
   text-align: center;
   background-image: url(/assets/rdtyuhij.jpg);
-  background-color: black;
   background-size: cover;
   position: relative;
   height: 100%;
+  background-attachment: fixed;
   }
     .left-box{
       float: left;
@@ -123,12 +123,11 @@ body{
         margin: auto;
         width: 50%;
         letter-spacing: 4px;
-        background-color: rgba(58, 58, 61, 0.582);
+        background-color: rgba(32, 32, 32, 0.582);
         color: white;
         font-family: 'M PLUS 1p', sans-serif;
         display: none;
-        border-bottom: thin solid white;
-
+        
         .contents{
           width: 600px;
           margin: auto;
@@ -141,6 +140,7 @@ body{
             line-height: 2;
             letter-spacing: 6px;
             border-bottom: thin solid #a3a3a3;
+            border-left: thin solid #a3a3a3;
 
           }
     }

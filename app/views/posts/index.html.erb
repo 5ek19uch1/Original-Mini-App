@@ -1,23 +1,28 @@
   <header>
     <div class = left-box>
       <div class = icons>
+
         <% if user_signed_in? %>
             <%= link_to destroy_user_session_path, method: :delete do%>
               <i class="fas fa-sign-out-alt"></i>
             <% end%>
-          <% else %>
-            <%= link_to new_user_registration_path do%>
-              <i class="fas fa-signature"></i>
-            <%end%>
-            <br>
-            <%= link_to new_user_session_path do%>
-              <i class="fas fa-sign-in-alt"></i>
-            <% end %>
-          <% end %>
             <br>
             <%= link_to new_post_path do %>
               <i class="far fa-edit"></i>
             <% end %>
+
+        <% else %>
+
+              <%= link_to new_user_registration_path do%>
+                <i class="fas fa-signature"></i>
+              <%end%>
+
+              <br>
+              <%= link_to new_user_session_path do%>
+                <i class="fas fa-sign-in-alt"></i>
+              <% end %>
+
+        <% end %>
       </div>
     </div>
 
@@ -39,12 +44,22 @@
           <label for="pop13">×</label>
         <div class="modalPopup2">
           <div class="modalPopup3">
-            <h4 class="modalTitle">このMINI APPについて</h4>
+            <h4 class="modalTitle">このBLOG APPについて</h4>
               <div class="modalMain">
-                <p>【要件定義１】本業（学習）が差し支えない程度にすること</p>
-                <p>【要件定義２】フロントエンドの練習・復習になること</p>
-                <p>【仕様】HTML、CSS、JS（jQuery）Webフォント使用の練習</p>
-                <p>【こだわり】フォント、行間、レイアウト、動き</p>
+                <p>ご覧いただきありがとうございます。
+                    <br>
+                    このブログアプリは、TECH::EXPERTという
+                    <br>
+                    プログラミングスクールに入学2週間後の成果発表の為に初めて自作の作品です。
+                    <br>
+                    Ruby on Railsで、Scaffoldをベースに作成しました。
+                    <br>
+                    機能としてはいたってシンプルで、投稿できるのはタイトルなしの本文のみ。
+                    <br>
+                    scaffoldで作られた真っ白な画面を、どこまで装飾できるか？というテーマで
+                    <br>
+                    マークアップの練習としてデザインしました。
+                    </p>
               </div>
             </div>
           </div>
